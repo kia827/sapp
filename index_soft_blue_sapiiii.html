@@ -1,0 +1,1300 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Sapiiii ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #eaf3fc;
+      --panel: #f5f9ff;
+      --wine: #c58e9b;
+      --rose: #c58e9b;
+      --rose-light: #7189a2;
+      --text: #40566f;
+      --muted: #71839a;
+      --line: rgba(113,137,162,.30);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(ellipse at top, #d7e9fb 0%, transparent 55%),
+        var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    button:focus-visible,
+    input:focus-visible {
+      outline: 2px solid var(--rose);
+      outline-offset: 4px;
+    }
+
+    .serif {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .container {
+      width: min(1040px, 90%);
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--rose);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: .68rem;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      font: 500 clamp(2.5rem, 6vw, 4rem) "Cormorant Garamond", serif;
+      margin-top: 8px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: .9rem;
+      margin-top: 5px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 23px;
+      border: 1px solid var(--rose);
+      border-radius: 2px;
+      background: var(--wine);
+      color: #ffffff;
+      transition: .25s;
+    }
+
+    .btn:hover {
+      background: #ad7485;
+      transform: translateY(-2px);
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: #40566f;
+      border-color: var(--line);
+    }
+
+    /* OPENING */
+
+    .hero {
+      min-height: 90svh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "✦";
+      position: absolute;
+      color: var(--rose);
+      opacity: .35;
+      font-size: 2rem;
+    }
+
+    .hero::before {
+      top: 20%;
+      left: 14%;
+    }
+
+    .hero::after {
+      bottom: 20%;
+      right: 14%;
+    }
+
+    .hero-inner {
+      max-width: 700px;
+      animation: fadeUp 1.1s ease both;
+    }
+
+    .hero h1 {
+      font: 500 clamp(4rem, 13vw, 8rem)/.95 "Cormorant Garamond", serif;
+      margin: 24px 0;
+    }
+
+    .hero h1 em {
+      color: var(--rose);
+      font-weight: 400;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 470px;
+      margin: 0 auto 28px;
+      font-size: .95rem;
+    }
+
+    .tiny-heart {
+      color: var(--rose);
+      margin-top: 35px;
+      font-size: 1.2rem;
+      animation: heartbeat 1.6s infinite;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(234,243,252,.92);
+      backdrop-filter: blur(15px);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 26px;
+      padding: 13px 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: .77rem;
+      transition: .2s;
+    }
+
+    nav a:hover {
+      color: #40566f;
+    }
+
+    /* MUSIC */
+
+    .music-bar {
+      position: fixed;
+      z-index: 20;
+      bottom: 18px;
+      right: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      background: rgba(245,249,255,.97);
+      box-shadow: 0 8px 30px #0005;
+    }
+
+    .music-button {
+      background: transparent;
+      border: none;
+      color: #40566f;
+      font-size: 1.1rem;
+    }
+
+    .music-label {
+      font-size: .7rem;
+      line-height: 1.5;
+    }
+
+    .music-label small {
+      display: block;
+      color: var(--muted);
+      font-size: .63rem;
+    }
+
+    /* SCRAPBOOK */
+
+    .scrapbook {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .photo-card {
+      padding: 11px;
+      background: #f7faff;
+      border: 1px solid var(--line);
+      transition: transform .3s, border-color .3s;
+    }
+
+    .photo-card:nth-child(odd) {
+      transform: rotate(-1deg);
+    }
+
+    .photo-card:nth-child(even) {
+      transform: rotate(1.2deg);
+    }
+
+    .photo-card:hover {
+      transform: translateY(-5px) rotate(0);
+      border-color: var(--rose);
+    }
+
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+      background: #dceafa;
+    }
+
+    .photo-card .caption {
+      font: italic 1.2rem "Cormorant Garamond", serif;
+      text-align: center;
+      padding: 12px 4px 4px;
+      color: #40566f;
+    }
+
+    .photo-card .photo-number {
+      color: var(--muted);
+      text-align: center;
+      font-size: .63rem;
+      letter-spacing: 2px;
+    }
+
+    /* SECRET LETTER */
+
+    .letter-section {
+      background: linear-gradient(180deg, transparent, #dceafa 50%, transparent);
+    }
+
+    .letter-intro {
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto 35px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .lock-card {
+      max-width: 430px;
+      margin: auto;
+      padding: 32px 25px;
+      text-align: center;
+      border: 1px solid var(--line);
+      background: rgba(245,249,255,.94);
+    }
+
+    .lock-icon {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    .lock-card h3 {
+      font: 500 2rem "Cormorant Garamond", serif;
+      margin-bottom: 5px;
+    }
+
+    .lock-card p {
+      color: var(--muted);
+      font-size: .83rem;
+      margin-bottom: 20px;
+    }
+
+    .password-form {
+      display: flex;
+      gap: 8px;
+    }
+
+    .password-form input {
+      min-width: 0;
+      flex: 1;
+      padding: 12px;
+      color: #ffffff;
+      background: #f5f9ff;
+      border: 1px solid var(--line);
+      border-radius: 0;
+    }
+
+    .password-form input::placeholder {
+      color: #71839a;
+    }
+
+    .password-form button {
+      padding: 12px 16px;
+    }
+
+    .error {
+      color: #f0a4b6;
+      font-size: .8rem;
+      margin-top: 12px;
+      min-height: 1.5em;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* ENVELOPE ANIMATION */
+
+    .envelope-stage {
+      text-align: center;
+      padding: 35px 0 20px;
+      animation: fadeUp .7s ease both;
+    }
+
+    .envelope {
+      position: relative;
+      width: min(300px, 82vw);
+      height: 190px;
+      margin: 15px auto 30px;
+      background: #b9d2ee;
+      border: 1px solid #9eb9d8;
+      box-shadow: 0 20px 60px #0005;
+      cursor: pointer;
+      perspective: 900px;
+    }
+
+    .envelope::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: #c8dff5;
+      clip-path: polygon(0 0, 50% 56%, 100% 0);
+      transform-origin: top;
+      transition: transform .8s ease, z-index .8s;
+    }
+
+    .envelope::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background: linear-gradient(140deg, #a9c8e8, #d5e7f8);
+      clip-path: polygon(0 100%, 0 0, 50% 56%, 100% 0, 100% 100%);
+      pointer-events: none;
+    }
+
+    .envelope-seal {
+      position: absolute;
+      z-index: 4;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #c58e9b;
+      color: #ffffff;
+      font-size: 1.2rem;
+      box-shadow: 0 3px 12px #0004;
+      transition: opacity .3s;
+    }
+
+    .envelope.open::before {
+      transform: rotateX(180deg);
+      z-index: 0;
+    }
+
+    .envelope.open .envelope-seal {
+      opacity: 0;
+    }
+
+    .envelope-hint {
+      color: var(--rose);
+      font-size: .8rem;
+      letter-spacing: 1px;
+    }
+
+    /* LETTER PAPER */
+
+    .letter-paper {
+      max-width: 720px;
+      margin: 35px auto 0;
+      padding: clamp(24px, 6vw, 55px);
+      color: #34465c;
+      background:
+        radial-gradient(ellipse at top left, #ffffff 0%, transparent 45%),
+        #fff8f0;
+      border: 1px solid #c5d7e9;
+      box-shadow: 0 25px 70px #0005;
+      text-align: left;
+      animation: letterReveal 1s ease both;
+    }
+
+    .letter-top {
+      text-align: center;
+      border-bottom: 1px solid #c5d7e9;
+      padding-bottom: 22px;
+      margin-bottom: 26px;
+    }
+
+    .letter-top .eyebrow {
+      color: #7189a2;
+      font-size: .62rem;
+    }
+
+    .letter-top h3 {
+      font: italic 500 clamp(2.2rem, 7vw, 3.6rem) "Cormorant Garamond", serif;
+      color: #40566f;
+      line-height: 1.1;
+      margin: 8px 0;
+    }
+
+    .letter-top p {
+      font-size: .76rem;
+      color: #71839a;
+    }
+
+    .letter-content {
+  font: 400 1.08rem/1.7 "Cormorant Garamond", serif;
+  white-space: normal;
+  }
+
+    .letter-content p {
+       margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+    .letter-content .highlight {
+      font-style: italic;
+      font-weight: 600;
+      color: #7189a2;
+    }
+
+    .letter-signature {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid #c5d7e9;
+      font: italic 1.35rem "Cormorant Garamond", serif;
+      color: #7189a2;
+    }
+
+    .letter-signature small {
+      display: block;
+      font: .7rem "DM Sans", sans-serif;
+      color: #71839a;
+      margin-top: 8px;
+    }
+
+    .letter-footer {
+      text-align: center;
+      color: #7189a2;
+      font-size: .8rem;
+      margin-top: 24px;
+    }
+
+    /* BIRTHDAY CAKE */
+
+    .cake-wrap {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .cake {
+      position: relative;
+      width: 180px;
+      height: 145px;
+      margin: 35px auto 20px;
+    }
+
+    .cake-base {
+      position: absolute;
+      bottom: 0;
+      width: 180px;
+      height: 85px;
+      background: linear-gradient(90deg, #8eaccd, #b9d2ee, #8eaccd);
+      border-radius: 7px 7px 15px 15px;
+      box-shadow: 0 12px 30px #0004;
+    }
+
+    .cake-base::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 19px;
+      border-radius: 7px;
+      background: #dceafa;
+    }
+
+    .cake-base::after {
+      content: "♡  ♡  ♡";
+      position: absolute;
+      width: 100%;
+      top: 35px;
+      text-align: center;
+      color: #fff8f4;
+      font-size: 1rem;
+      letter-spacing: 8px;
+    }
+
+    .candle {
+      position: absolute;
+      width: 10px;
+      height: 40px;
+      top: 23px;
+      left: 85px;
+      z-index: 2;
+      background: repeating-linear-gradient(
+        45deg, #fff8f4, #fff8f4 5px, #c58e9b 5px, #c58e9b 10px
+      );
+      border-radius: 2px;
+    }
+
+    .flame {
+      position: absolute;
+      width: 15px;
+      height: 22px;
+      top: -23px;
+      left: -2px;
+      background: #ffd28b;
+      border-radius: 50% 50% 45% 45%;
+      transform: rotate(5deg);
+      box-shadow: 0 0 22px #ffbd70, 0 0 40px #ffbd7055;
+      animation: flicker .8s infinite alternate;
+      transform-origin: bottom;
+    }
+
+    .flame.out {
+      opacity: 0;
+      animation: none;
+    }
+
+    .cake-text {
+      font: italic 2rem "Cormorant Garamond", serif;
+      color: #40566f;
+      margin: 25px 0 8px;
+    }
+
+    .cake-wrap p {
+      color: var(--muted);
+      font-size: .87rem;
+      margin-bottom: 20px;
+    }
+
+    /* ENDING */
+
+    .ending {
+      text-align: center;
+      padding: 110px 20px 130px;
+      border-top: 1px solid var(--line);
+      background: radial-gradient(ellipse at bottom, #d7e9fb, transparent 65%);
+    }
+
+    .ending h2 {
+      font: italic 500 clamp(2.7rem, 7vw, 5rem)/1.1 "Cormorant Garamond", serif;
+      max-width: 750px;
+      margin: 20px auto;
+    }
+
+    .ending h2 em {
+      color: var(--rose);
+    }
+
+    .ending p {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #71839a;
+      font-size: .7rem;
+      border-top: 1px solid var(--line);
+    }
+
+    /* CONFETTI */
+
+    .confetti {
+      position: fixed;
+      z-index: 99;
+      top: -15px;
+      width: 8px;
+      height: 12px;
+      pointer-events: none;
+      animation: fall linear forwards;
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes letterReveal {
+      from { opacity: 0; transform: translateY(22px) scale(.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.18); }
+    }
+
+    @keyframes flicker {
+      from { transform: rotate(-5deg) scale(.94); }
+      to { transform: rotate(5deg) scale(1.06); }
+    }
+
+    @keyframes fall {
+      to {
+        transform: translate(var(--drift), 110vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .section {
+        padding: 72px 0;
+      }
+
+      .scrapbook {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+      }
+
+      .photo-card {
+        padding: 7px;
+      }
+
+      .photo-card .caption {
+        font-size: 1.05rem;
+      }
+
+      .nav-inner {
+        gap: 17px;
+      }
+
+      .password-form {
+        flex-direction: column;
+      }
+
+      .password-form button {
+        width: 100%;
+      }
+
+      .music-bar {
+        bottom: 10px;
+        right: 10px;
+      }
+
+      .letter-content {
+        font-size: 1.04rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MUSIC PLAYER -->
+  <div class="music-bar">
+    <button class="music-button" id="music-toggle"
+      aria-label="Putar musik" type="button">♫</button>
+    <div class="music-label">
+      Never Grow Up
+      <small id="music-status">tap to play ♡</small>
+    </div>
+  </div>
+
+  <audio id="birthday-music" src="music/birthday-song.mp3"
+    loop preload="none"></audio>
+
+  <!-- OPENING -->
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <span class="eyebrow">a little something, just for you</span>
+      <h1 class="serif">Happy Birthday,<br><em>Sapiiii.</em></h1>
+      <p>
+        Another year older, another year of being your
+        wonderfully random self. I'm glad you're here. ♡
+      </p>
+      <a class="btn" href="#memories">Let's take a look <span>↓</span></a>
+      <div class="tiny-heart">♡</div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#home">HOME</a>
+      <a href="#memories">OUR MEMORIES</a>
+      <a href="#letter">A SECRET LETTER</a>
+      <a href="#birthday">ONE LAST THING</a>
+    </div>
+  </nav>
+
+  <!-- SCRAPBOOK -->
+  <section class="section" id="memories">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">little moments, big memories</span>
+        <h2>Pieces of Us</h2>
+        <p>Some moments deserve to stay a little longer.</p>
+      </div>
+
+      <div class="scrapbook">
+        <article class="photo-card">
+          <img src="photos/foto1.jpeg" alt="Kenangan kita 1" loading="lazy">
+          <p class="caption">Foto favorit, karenaa lucuuu ♡</p>
+          <p class="photo-number">MEMORY 01</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="photos/foto2.jpeg" alt="Kenangan kita 2" loading="lazy">
+          <p class="caption">Ini lucuu bangett, fotbar setelah apaa yaaa inii</p>
+          <p class="photo-number">MEMORY 02</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="photos/foto3.jpeg" alt="Kenangan kita 3" loading="lazy">
+          <p class="caption">foto waktu di Jogjaa, ngga sengaja couple ga sii ini kayanyaa</p>
+          <p class="photo-number">MEMORY 03</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="photos/foto4.jpeg" alt="Kenangan kita 4" loading="lazy">
+          <p class="caption">Fotbar waktu YearBook yang sangatt banyakk kenangannyaa yaa wkwkwk</p>
+          <p class="photo-number">MEMORY 04</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="photos/foto5.jpeg" alt="Kenangan kita 5" loading="lazy">
+          <p class="caption">Ngantuk kaks?</p>
+          <p class="photo-number">MEMORY 05</p>
+        </article>
+
+        <article class="photo-card">
+          <img src="photos/foto6.jpeg" alt="Kenangan kita 6" loading="lazy">
+          <p class="caption">Yeayyy first time ke pantai ♡</p>
+          <p class="photo-number">MEMORY 06</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECRET LETTER -->
+  <section class="section letter-section" id="letter">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">not for everyone</span>
+        <h2>A Letter for You</h2>
+        <p>A little something I wanted you to read.</p>
+      </div>
+
+      <p class="letter-intro">
+        There's something waiting for you here.
+        A tiny secret, from me to you. ♡
+      </p>
+
+      <div class="lock-card" id="lock-card">
+        <div class="lock-icon">♡</div>
+        <h3 class="serif">This one's just for you.</h3>
+        <p>Enter the secret password to open your letter.</p>
+
+        <form class="password-form" id="password-form">
+          <input
+            id="password-input"
+            type="password"
+            placeholder="your secret password..."
+            autocomplete="off"
+            aria-label="Secret password"
+            required
+          >
+          <button class="btn" type="submit">Unlock ♡</button>
+        </form>
+        <div class="error" id="password-error" role="status"></div>
+      </div>
+
+      <!-- ENVELOPE -->
+      <div class="envelope-stage hidden" id="envelope-stage">
+        <p class="eyebrow">sealed with love</p>
+        <h3 class="serif" style="font-size:2rem; margin-top:8px;">
+          To my favorite human ♡
+        </h3>
+
+        <button class="envelope" id="envelope" type="button"
+          aria-label="Buka amplop surat">
+          <span class="envelope-seal">♡</span>
+        </button>
+
+        <p class="envelope-hint" id="envelope-hint">
+          tap the envelope to open your letter
+        </p>
+      </div>
+
+      <!-- LETTER PAPER -->
+      <article class="letter-paper hidden" id="letter-paper">
+        <div class="letter-top">
+          <span class="eyebrow">a little secret letter</span>
+          <h3>For Sapiiii</h3>
+          <p>Written with love, just for you ♡</p>
+        </div>
+
+        <div class="letter-content" id="letter-content">
+          <p>HAIIII, Sapiiiii!! 🫵🏻💗</p>
+
+          <p>
+            Cieee, yang hari ini ulang tahun siapa hayooo?
+            WALAUPUN TELAT YAKK
+            WKWKWK. HAPPY BIRTHDAYYYY, SAPIIII!! 🎂
+          </p>
+
+          <p>
+            Selamat bertambah umur, yaa, manusia random yang
+            entah kenapa bisa jadi salah satu orang yang berarti
+            buat aku. Cieee, jangan geer dulu bacanya. 😭☝🏻
+          </p>
+
+          <p>
+            Pertama-tama, semoga panjang umur, sehat selalu,
+            bahagia terus, dilancarkan semua urusannya, dan semoga
+            apa pun yang lagi kamu usahakan sekarang bisa
+            mendapatkan hasil yang baik. Semoga keinginan-keinginan
+            kecil yang selama ini kamu simpan juga satu per satu
+            bisa terwujud.
+          </p>
+
+          <p>
+            Aku sebenarnya nggak tahu harus mulai dari mana,
+            karena jujurrr ngga bisa ngerangkai kata kata anjayyy,
+            semoga kamu bisa paham ya sama kata kataku 😭
+          </p>
+
+          <p class="highlight">Tapi serius sebentar, yaa.</p>
+
+          <p>
+            Makasih udah jadi bagian dari hidup aku sampai sejauh
+            ini. Makasih buat semua obrolan random, ketawa nggak
+            jelas, bercandaan receh, dan hal-hal sederhana yang
+            mungkin waktu itu terasa biasa aja, tapi ternyata jadi
+            kenangan yang menyenangkan buat diingat.
+          </p>
+
+          <p>
+            Lucu juga, ya, gimana seseorang yang awalnya cuma kita
+            kenal bisa akhirnya jadi orang yang punya tempat
+            tersendiri di hidup kita. Dan aku seneng karena salah
+            satu orang itu adalah kamu.
+          </p>
+
+          <p>
+            Aku mungkin nggak selalu bilang kalau aku sayang atau
+            bersyukur punya kamu sebagai teman. Kadang malah lebih
+            sering ngeledekin daripada ngomong manis. Tapi bukan
+            berarti aku nggak peduli ya, Sapiiii. Jangan sampai
+            kamu menyimpulkan aku teman yang tidak berperasaan cuma
+            gara-gara suratku biasanya kalah panjang sama chat
+            random kita. 😭☝🏻
+          </p>
+
+          <p class="highlight">
+            Di balik semua bercandaan itu, aku beneran berharap
+            kamu selalu punya banyak alasan buat bahagia.
+          </p>
+
+          <p>
+            Kalau suatu hari kamu lagi capek, lagi banyak pikiran,
+            atau ngerasa semuanya nggak berjalan sesuai rencana,
+            semoga kamu nggak lupa kalau kamu nggak harus selalu
+            kelihatan kuat. Nggak apa-apa kalau ada hari ketika
+            kamu cuma pengin istirahat. Nggak apa-apa kalau kamu
+            belum tahu harus melangkah ke mana. Kamu nggak harus
+            punya semua jawabannya sekarang.
+          </p>
+
+          <p>
+            Aku harap kamu bisa terus tumbuh jadi versi diri kamu
+            yang kamu banggakan, tanpa harus memaksakan diri
+            menjadi seseorang yang bukan kamu. Semoga kamu ketemu
+            banyak hal baik, orang-orang baik, dan kesempatan yang
+            bikin kamu sadar kalau kamu juga pantas mendapatkan
+            kebahagiaan yang selama ini kamu harapkan.
+            I'M REALLY REALLY PROUD OF YOUU CINTAKUUUU  
+          </p>
+
+          <p>
+            Terus, ada satu hal yang kadang bikin aku kepikiran.
+          </p>
+
+          <p>
+            Sekarang mungkin kita masih punya banyak kesempatan
+            buat ketawa bareng, cerita ini-itu, dan menghabiskan
+            waktu tanpa terlalu mikirin masa depan. Tapi kedepannya,
+            kita pasti bakal makin dewasa. Bakal bnayak kesibukan
+            masing-masing, tanggung jawab yang makin banyak, dan
+            mungkin waktu kita buat ketemu atau ngobrol nggak akan
+            selalu sebanyak duluu yaa
+          </p>
+
+          <p>
+            Agak yakk sedih kalau dipikirin, tapi ya namanya hidup,
+            kan? Kita memang nggak bisa selamanya berada di fase
+            yang sama.
+          </p>
+
+          <p class="highlight">
+            Tapi aku harap, sesibuk apa pun kita, kita nggak
+            sampai jadi dua orang yang cuma bisa bilang,
+            "Dulu kita pernah sedekat itu, ya."
+            atau bahkan malah cuma jadi penonton story aja, 
+            JANGAN SAMPE!!!!
+          </p>
+
+          <p>
+            Aku harap kita masih bisa saling cerita tentang
+            hal-hal kecil. Masih bisa ketawa karena lelucon yang
+            mungkin cuma kita yang ngerti. Masih bisa saling
+            ngabarin, saling dukung, dan sesekali mengingat betapa
+            random-nya masa-masa kita dulu.
+          </p>
+
+          <p>
+            Aku nggak berharap semuanya bakal selalu sama seperti
+            dulu. Aku cuma berharap, meskipun banyak hal
+            berubah, pertemanan ini tetap punya tempat untuk tumbuh,
+            dan kita masih bisa nyempetin buat quality time berdua walaupun
+            cuma sekedar beli makan atau ngerjain tugas bareng.
+          </p>
+
+          <p>
+            Jadi, Sapiiii, selamat bertambah umur, yaa. Terima
+            kasih sudah bertahan sejauh ini, terima kasih sudah
+            melewati hari-hari yang mungkin nggak semuanya mudah,
+            dan terima kasih karena selama ini kamu sudah menjadi
+            dirimu sendiri. ngga bosen-bosen aku bilang I'M REALLY PROUD OF YOUU
+          </p>
+
+          <p>
+            Semoga umur barumu membawa lebih banyak cerita baik.
+            Semoga nanti, ketika kamu melihat ke belakang, kamu
+            bisa tersenyum karena ternyata kamu sudah melewati
+            begitu banyak hal. Dan semoga di antara semua kenangan
+            yang kamu kumpulkan sepanjang hidup, ada beberapa
+            kenangan tentang kita yang masih bisa bikin kamu ketawa
+            sendiri.
+          </p>
+
+          <p class="highlight">
+            Grow up, but please don't forget the little things
+            that make you you. 🤍
+          </p>
+
+          <p>
+            Kita boleh makin dewasa, boleh punya mimpi yang makin
+            besar, boleh berjalan ke arah yang berbeda untuk
+            mengejar kehidupan masing-masing. Tapi semoga kita
+            nggak pernah kehilangan versi diri kita yang dulu
+            bisa bahagia cuma karena hal-hal sederhana.
+          </p>
+
+          <p>
+            Happy birthday, Sapiiii. Semoga dunia memperlakukan
+            kamu dengan baik. Semoga kamu selalu menemukan alasan
+            untuk tersenyum, bahkan di hari-hari yang berat. Dan
+            semoga kamu nggak pernah merasa sendirian saat sedang
+            melewati semuanya.
+            Kalo kamu lagi butuh curhat atau cerita cerita di hari harimu yang entah senang, sedih,
+            lagi berat atau buat emosii, hubungin aku ajaaa. Nomorku masih sama kok wkwkwk
+          </p>
+
+          <p>
+            Aku seneng bisa kenal kamu. Aku seneng kita punya
+            cerita sejauh ini. Dan aku harap, masih banyak cerita
+            lain yang bisa kita buat setelah hari ini.
+          </p>
+
+          <p class="highlight">
+            Here's to growing older, making more memories, and
+            hopefully growing up without growing apart. 🥹💗
+          </p>
+
+          <p>
+            Love you, Sapiiii. Jangan nangis, nanti maskaramu
+            luntur—eh, emang pakai maskara? WKWKWK. 😭🫵🏻
+          </p>
+
+          <p>
+            Sekali lagi, HAPPY BIRTHDAYYYY, BIRTHDAY GIRLLLL!! 🎂💌
+          </p>
+        </div>
+
+        <div class="letter-signature">
+          with lots of love,
+          <br>your annoying friend, always ♡
+          <small>
+            p.s. kalau kamu senyum-senyum sendiri pas baca ini,
+            berarti small giftku berhasil. kalau nangis juga gapapa kok,
+            WKWKWK.
+          </small>
+        </div>
+
+        <div class="letter-footer">made with love, just for you ♡</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- BIRTHDAY SURPRISE -->
+  <section class="section" id="birthday">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">and finally...</span>
+        <h2>One Last Thing</h2>
+        <p>Because your birthday deserves one more little surprise.</p>
+      </div>
+
+      <div class="cake-wrap">
+        <div class="cake" aria-label="Kue ulang tahun dengan satu lilin">
+          <div class="candle">
+            <div class="flame" id="flame"></div>
+          </div>
+          <div class="cake-base"></div>
+        </div>
+
+        <h3 class="cake-text">Make a wish, Sapiiii.</h3>
+        <p>
+          Tutup mata sebentar, pikirkan satu harapan,
+          lalu tiup lilinnya. ♡
+        </p>
+
+        <button class="btn" id="wish-button" type="button">
+          Make a wish ✨
+        </button>
+        <p id="wish-message" class="hidden" style="margin-top:20px;">
+          I hope your wish finds its way to you. ♡
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENDING -->
+  <section class="ending" id="ending">
+    <span class="eyebrow">03 — one last thing</span>
+    <h2>Thank you for being <em>you.</em></h2>
+    <p>
+      We may grow older, but I hope we never grow apart. ♡
+    </p>
+    <div class="tiny-heart">♥</div>
+  </section>
+
+  <footer>
+    made with love, for Sapiiii ♡
+  </footer>
+
+  <script>
+    // ==============================
+    // 1. SECRET PASSWORD
+    // ==============================
+
+    const SECRET_PASSWORD = "bungsu";
+
+    const passwordForm = document.getElementById("password-form");
+    const passwordInput = document.getElementById("password-input");
+    const passwordError = document.getElementById("password-error");
+    const lockCard = document.getElementById("lock-card");
+    const envelopeStage = document.getElementById("envelope-stage");
+    const envelope = document.getElementById("envelope");
+    const envelopeHint = document.getElementById("envelope-hint");
+    const letterPaper = document.getElementById("letter-paper");
+
+    passwordForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const enteredPassword = passwordInput.value.trim();
+
+      if (enteredPassword.toLowerCase() === SECRET_PASSWORD) {
+        lockCard.classList.add("hidden");
+        envelopeStage.classList.remove("hidden");
+        passwordError.textContent = "";
+
+        envelopeStage.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      } else {
+        passwordError.textContent =
+          "Hmm, password-nya belum benar. Coba lagi yaa ♡";
+        passwordInput.value = "";
+        passwordInput.focus();
+      }
+    });
+
+    // ==============================
+    // 2. OPEN THE ENVELOPE
+    // ==============================
+
+    let letterOpened = false;
+
+    envelope.addEventListener("click", function () {
+      if (letterOpened) return;
+
+      letterOpened = true;
+      envelope.classList.add("open");
+      envelopeHint.textContent = "opening something just for you...";
+
+      setTimeout(function () {
+        letterPaper.classList.remove("hidden");
+        envelopeHint.textContent = "a little letter, from me to you ♡";
+
+        letterPaper.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+        celebrate(35);
+      }, 850);
+    });
+
+    // ==============================
+    // 3. MUSIC PLAYER
+    // ==============================
+
+    const music = document.getElementById("birthday-music");
+    const musicToggle = document.getElementById("music-toggle");
+    const musicStatus = document.getElementById("music-status");
+
+    function updateMusicButton() {
+      if (music.paused) {
+        musicToggle.textContent = "♫";
+        musicToggle.setAttribute("aria-label", "Putar musik");
+        musicStatus.textContent = "tap to play ♡";
+      } else {
+        musicToggle.textContent = "Ⅱ";
+        musicToggle.setAttribute("aria-label", "Jeda musik");
+        musicStatus.textContent = "now playing ♡";
+      }
+    }
+
+    musicToggle.addEventListener("click", async function () {
+      if (music.paused) {
+        try {
+          await music.play();
+        } catch (error) {
+          musicStatus.textContent = "check your music file";
+        }
+      } else {
+        music.pause();
+      }
+
+      updateMusicButton();
+    });
+
+    music.addEventListener("play", updateMusicButton);
+    music.addEventListener("pause", updateMusicButton);
+    music.addEventListener("ended", updateMusicButton);
+
+    music.addEventListener("error", function () {
+      musicStatus.textContent = "music file not found";
+    });
+
+    // ==============================
+    // 4. BIRTHDAY CAKE & WISH
+    // ==============================
+
+    const wishButton = document.getElementById("wish-button");
+    const flame = document.getElementById("flame");
+    const wishMessage = document.getElementById("wish-message");
+
+    let wishMade = false;
+
+    wishButton.addEventListener("click", function () {
+      if (wishMade) return;
+
+      wishMade = true;
+      flame.classList.add("out");
+      wishMessage.classList.remove("hidden");
+
+      wishButton.textContent = "Wish sent into the universe ♡";
+      wishButton.disabled = true;
+      wishButton.style.opacity = ".7";
+
+      celebrate(90);
+    });
+
+    // ==============================
+    // 5. CONFETTI EFFECT
+    // ==============================
+
+    function celebrate(amount) {
+      const colors = [
+        "#c58e9b",
+        "#dceafa",
+        "#7189a2",
+        "#fff8f4",
+        "#b9d2ee"
+      ];
+
+      for (let i = 0; i < amount; i++) {
+        const piece = document.createElement("span");
+
+        piece.className = "confetti";
+        piece.textContent = Math.random() > 0.5 ? "♥" : "✦";
+
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.color =
+          colors[Math.floor(Math.random() * colors.length)];
+        piece.style.fontSize =
+          (Math.random() * 9 + 7) + "px";
+        piece.style.setProperty(
+          "--drift",
+          (Math.random() * 200 - 100) + "px"
+        );
+        piece.style.animationDuration =
+          (Math.random() * 3 + 3) + "s";
+
+        document.body.appendChild(piece);
+
+        piece.addEventListener("animationend", function () {
+          piece.remove();
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
